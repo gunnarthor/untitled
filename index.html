@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforce Labs</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #606c71;
+        }
+
+        a {
+            color: #159957;
+        }
+
+        .header {
+            color: #fff;
+            text-align: center;
+            background-color: #159957;
+            background-image: linear-gradient(120deg, #155799, #159957);
+            padding: 3rem 6rem 7rem;
+        }
+
+        .header h1 {
+            margin-bottom: 1rem;
+            font-size: 3.25rem;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.7;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            color: #176964;
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #176964;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        h4 {
+            color: #176964;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            display: block;
+            grid-column: 1 / -1; /* span across all columns */
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin: 3rem 0;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .profile-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #176964;
+            margin: 0 auto 1rem;
+        }
+
+        .social-links {
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            color: #606c71;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .social-links a:hover {
+            color: #176964;
+        }
+
+        .services-section {
+            margin: 3rem 6rem;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .services-sub-header {
+            grid-column: 1 / -1; /* span across all columns */
+        }
+
+        .services-list {
+            list-style-type: none;
+        }
+
+        .services-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .services-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #176964;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem 2rem 3rem;
+            background-color: #f3f6fa;
+            border-radius: 0.4rem;   
+        }
+
+        .contact-section h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f3f6fa;
+            border-top: solid 1px #eff0f1;
+            font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 42em) {
+            .header {
+                padding: 3rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .team-section {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+
+
+        .team-member {
+            display: flex;
+            gap: 1.5rem;
+            flex: 1;
+            text-align: left;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .position {
+            font-size: 1.25rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0rem;
+        }
+
+        .social-link {
+            background-color: #e8ff8b;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s ease;
+        }
+
+        .social-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Reinforce Labs</h1>
+        <p>Boost your Rails development team with seasoned professionals</p>
+    </header>
+
+    <main class="container">
+        <section class="team-section">
+            <div class="team-member">
+                <img src="filipe.jpg" alt="Filipe Moreira" class="profile-image">
+                <div class="content">
+                    <h1 class="name">Filipe Moreira</h1>
+                    <h2 class="position">Senior Software Engineer</h2>
+                    <p class="description">
+                        Filipe has worked with diverse clients across different industries such as ecommerce, online learning and insurance. Filipe and his family live in Sandhurst, just outside London, UK.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/filipeamoreira/" target="_blank" aria-label="Filipe's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/filipeamoreira" target="_blank" aria-label="Filipe's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="gunnar3.jpg" alt="Filipe Moreira" class="profile-image">
+                <div class="content">
+                    <h1 class="name">Gunnar Thor</h1>
+                    <h2 class="position">Senior Software Engineer</h2>
+                    <p class="description">
+                        Extensive experience working on financial systems in insurance and telecom. Gunnar lives with his family in Hørsholm, a charming town just north of Copenhagen in Denmark.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gunnar-thor/" target="_blank" aria-label="Gunnar's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/gunnarthor" target="_blank" aria-label="Gunnar's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>How we can help your team</h2>
+            <div class="services-grid">
+                <ul class="services-list">
+                    <li><strong>Improve test suite and coverage</strong></li>
+                    <li><strong>Rails/Ruby upgrades</strong></li>
+                    <li style="margin-bottom: 1.5rem;">Feature development</li>
+                    <li>Legacy system maintenance</li>
+                    <li>Gem upgrades and migrations</li>
+                    <li>API development and integrations</li>
+                    <li>Preparation for AI-driven solutions</li>
+                    <li>Help clean up bugs logged in error trackers</li>
+                </ul>
+                <ul class="services-list">
+                    <li><strong>Assess and work on technical debt</strong></li>
+                    <li>Training and mentoring</li>
+                    <li style="margin-bottom: 1.5rem;">PR/Code reviews</li>
+                    <li>Performance optimizations</li>
+                    <li>Security audits and improvements</li>
+                    <li>Internationalization and localization</li>
+                    <li>Development process improvements</li>
+                    <li>GDPR/privacy compliance implementation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>We'd love to talk to see if there is a good fit</h2>
+            <p>Email us at <a href="mailto:contact@reinforcelabs.com?subject=From website">contact@reinforcelabs.com</a> to get started. Thank you.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Copyright © 2024 Filipe Moreira and Gunnar Thor Hjalmarsson
+    </footer>
+</body>
+</html>

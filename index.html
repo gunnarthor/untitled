@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f6e5d4b162.js"></script>
     <style>
         * {
             margin: 0;
@@ -52,11 +53,19 @@
             padding: 2rem;
         }
 
+        i.fa-solid {
+            color: #176964;
+            position: absolute;
+            left: -6px;
+            top: 4px;
+        }
+
         h2 {
             color: #176964;
             font-size: 2rem;
             margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
 
         h3 {
@@ -100,7 +109,7 @@
         .social-links a {
             color: #606c71;
             text-decoration: none;
-            margin: 0 0.5rem;
+            margin: 0 1rem 0 0;
             font-size: 1.2rem;
             transition: color 0.2s ease-in-out;
         }
@@ -110,12 +119,7 @@
         }
 
         .services-section {
-            margin: 3rem 6rem;
-        }
-
-        .services-section h2 {
-            text-align: center;
-            margin-bottom: 2rem;
+            margin: 6rem;
         }
 
         .services-grid {
@@ -145,17 +149,40 @@
             color: #176964;
         }
 
+        .services-list li.title::before {
+            content: "";
+        }
+
+        .clients-section .row {
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .clients-section img {
+            display: inline-block;
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            opacity: 0.80;
+            vertical-align: middle;
+            filter: grayscale(100%);
+            margin: 0 1rem;
+        }
+
         .contact-section {
             text-align: center;
-            margin: 3rem 0;
+            margin: 6rem 0 3rem;
             padding: 2rem 2rem 3rem;
             background-color: #f3f6fa;
             border-radius: 0.4rem;   
         }
 
         .contact-section h2 {
-            margin-top: 0;
             font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
         }
 
         .footer {
@@ -273,16 +300,16 @@
 <body>
     <header class="header">
         <h1>Reinforce Labs</h1>
-        <p>Hire our team of seasoned Rails engineers to boost your development team</p>
+        <p>Hire our team of Senior Rails Engineers to boost your development team's performance</p>
     </header>
 
     <main class="container">
         <section class="team-section">
             <div class="team-member">
-                <img src="filipe.jpg" alt="Filipe Moreira" class="profile-image">
+                <img src="images/filipe.jpg" alt="Filipe Moreira" class="profile-image">
                 <div class="content">
                     <h1 class="name">Filipe Moreira</h1>
-                    <h2 class="position">Senior Software Engineer</h2>
+                    <h3 class="position">Senior Software Engineer</h3>
                     <p class="description">
                         Filipe has worked with diverse clients across different industries such as ecommerce, online learning and insurance. Filipe and his family live in Sandhurst, just outside London, UK.
                     </p>
@@ -297,10 +324,10 @@
                 </div>
             </div>
             <div class="team-member">
-                <img src="gunnar3.jpg" alt="Filipe Moreira" class="profile-image">
+                <img src="images/gunnar.jpg" alt="Filipe Moreira" class="profile-image">
                 <div class="content">
                     <h1 class="name">Gunnar Thor</h1>
-                    <h2 class="position">Senior Software Engineer</h2>
+                    <h3 class="position">Senior Software Engineer</h3>
                     <p class="description">
                         Extensive experience working on financial systems in insurance and telecom. Gunnar lives with his family in Hørsholm, a charming town just north of Copenhagen in Denmark.
                     </p>
@@ -320,31 +347,60 @@
             <h2>How we can help your team</h2>
             <div class="services-grid">
                 <ul class="services-list">
-                    <li><strong>Improve test suite and coverage</strong></li>
-                    <li><strong>Rails/Ruby upgrades</strong></li>
-                    <li style="margin-bottom: 1.5rem;">Feature development</li>
-                    <li>Legacy system maintenance</li>
+                    <li class="title"><strong><i class="fa-solid fa-screwdriver-wrench"></i> Technical Foundation & Upgrades</strong></li>
+                    <li>Rails/Ruby upgrades</li>
+                    <li>Assess and work on technical debt</li>
                     <li>Gem upgrades and migrations</li>
+                    <li style="margin-bottom: 2rem;">Performance optimizations</li>
+                    
+                    <li class="title"><strong><i class="fa-solid fa-laptop-code"></i> Development & Implementation</strong></li>
+                    <li>Feature development</li>
                     <li>API development and integrations</li>
-                    <li>Preparation for AI-driven solutions</li>
-                    <li>Help clean up bugs logged in error trackers</li>
+                    <li>Legacy system maintenance</li>
+                    <li>Clean up bugs logged in error trackers</li>
                 </ul>
                 <ul class="services-list">
-                    <li><strong>Assess and work on technical debt</strong></li>
-                    <li>Training and mentoring</li>
-                    <li style="margin-bottom: 1.5rem;">PR/Code reviews</li>
-                    <li>Performance optimizations</li>
+                    <li class="title"><strong><i class="fa-solid fa-shield-halved"></i> Quality & Standards</strong></li>
+                    <li>Improve test suite and coverage</li>
+                    <li>Code quality tooling setup</li>
                     <li>Security audits and improvements</li>
-                    <li>Internationalization and localization</li>
+                    <li style="margin-bottom: 2rem;">GDPR/privacy compliance implementation</li>
+                    
+                    <li class="title"><strong><i class="fa-solid fa-users"></i> Process & Team Enhancement</strong></li>
+                    <li>Training and mentoring</li>
+                    <li>Preparation for AI-driven solutions</li>
+                    <li>PR/Code reviews</li>
                     <li>Development process improvements</li>
-                    <li>GDPR/privacy compliance implementation</li>
                 </ul>
             </div>
         </section>
 
+        <section class="clients-section">
+            <h2>We have worked with</h2>
+            <div class="row">
+                <img src="images/logo-pgt-switch.png" alt="Peugeot" draggable="false" style="max-width: 20%;" />
+                <img src="images/logo-dktv.png" alt="DKTV" draggable="false" style="max-width: 15%; opacity: 0.5;" />
+                <img src="images/logo-tusker.png" alt="Tusker" draggable="false" style="max-width: 13%; opacity: 0.4;" />
+                <img src="images/logo-landsvirkjun.png" alt="Landsvirkjun" draggable="false" style="opacity: 0.9; max-width: 17%;" />
+            </div>
+            <div class="row">
+                <img src="images/logo-ombulabs.png" alt="OmbuLabs" draggable="false" style="max-width: 20%; opacity: 0.5;" />
+                <img src="images/logo-fastruby.png" alt="FastRuby" draggable="false" style="max-width: 20%; opacity: 0.5;" />
+                <img src="images/logo-resolver.png" alt="Resolver" draggable="false" style="max-width: 18%; opacity: 0.4;" />
+                <img src="images/logo-tryggja.png" alt="FastRuby" draggable="false" style="max-width: 12%; opacity: 0.5;" />
+            </div>
+            <div class="row">
+                <img src="images/logo-quick-restaurants.png" alt="Quick Restaurants" draggable="false" style="max-width: 12%;" />
+                <img src="images/logo-siminn.png" alt="Síminn" draggable="false" style="max-width: 11%; margin-top: -0.5rem;" />
+                <img src="images/logo-easy123art.png" alt="Easy 123 Art" draggable="false" style="max-width: 11%; opacity: 0.5;" />
+                <img src="images/logo-k3-integrations.png" alt="K3 Integrations" draggable="false" style="max-width: 11%; opacity: 0.5; filter: grayscale(100%) brightness(70%); mix-blend-mode: multiply;" />
+            </div>
+            
+        </section>
+
         <section class="contact-section">
             <h2>We'd love to talk to see if there is a good fit</h2>
-            <p>Email us at <a href="mailto:contact@reinforcelabs.com?subject=From website">contact@reinforcelabs.com</a> to get started. Thank you.</p>
+            <p>Email us at <a href="mailto:contact@reinforcelabs.com?subject=From website">contact@reinforcelabs.com</a> to get started.</p>
         </section>
     </main>
 

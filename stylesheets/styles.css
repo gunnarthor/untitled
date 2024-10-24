@@ -1,0 +1,289 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #606c71;
+}
+
+a {
+  color: #159957;
+}
+
+/* Typography */
+h2 {
+  color: #176964;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h3 {
+  color: #176964;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+h4 {
+  color: #176964;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: block;
+  grid-column: 1 / -1;
+}
+
+/* Layout */
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Section */
+.header {
+  color: #fff;
+  text-align: center;
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
+  padding: 3rem 6rem 7rem;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+  font-size: 3.25rem;
+  font-weight: bold;
+}
+
+.header p {
+  font-size: 1.25rem;
+  opacity: 0.7;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Team Section */
+.team-section {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+.team-member {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  text-align: left;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.profile-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #176964;
+  margin: 0 auto 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.position {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 0;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #606c71;
+  text-decoration: none;
+  margin: 0 1rem 0 0;
+  font-size: 1.2rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #176964;
+}
+
+.social-link {
+  background-color: #e8ff8b;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+/* Services Section */
+.services-section {
+  margin: 6rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.services-sub-header {
+  grid-column: 1 / -1;
+}
+
+.services-list {
+  list-style-type: none;
+}
+
+.services-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.services-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #176964;
+}
+
+.services-list li.title::before {
+  content: "";
+}
+
+/* Icons */
+i.fa-solid {
+  color: #176964;
+  position: absolute;
+  left: -6px;
+  top: 4px;
+}
+
+/* Clients Section */
+.clients-section .row {
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clients-section img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0.80;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  margin: 0 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 6rem 0 3rem;
+  padding: 2rem 2rem 3rem;
+  background-color: #f3f6fa;
+  border-radius: 0.4rem;  
+}
+
+.contact-section h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f3f6fa;
+  border-top: solid 1px #eff0f1;
+  font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 3rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .team-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .services-section {
+    margin: 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

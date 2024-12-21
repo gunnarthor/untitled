@@ -32,15 +32,6 @@ h3 {
   margin-top: 1rem;
 }
 
-h4 {
-  color: #176964;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  display: block;
-  grid-column: 1 / -1;
-}
-
 /* Layout */
 .container {
   max-width: 64rem;
@@ -200,6 +191,43 @@ i.fa-solid {
   top: 4px;
 }
 
+/* Work Section */
+.work-section {
+  margin: 6rem 0;
+}
+
+.work-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem 3rem;
+  align-items: start;
+}
+
+.work-grid h4 {
+  color: #176964;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  text-align: right;
+}
+
+.work-grid p {
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.work-grid p:last-child {
+  margin-bottom: 0;
+}
+
+/* Media Queries */
+
+/* Media Queries */
+
 /* Clients Section */
 .clients-section .row {
   white-space: nowrap;
@@ -262,6 +290,31 @@ i.fa-solid {
     gap: 2rem;
   }
 
+  .services-section {
+    margin: 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-section {
+    margin: 4rem 0;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .work-grid h4 {
+    margin-bottom: 0.25rem;
+  }
+
+  .work-grid p {
+    margin-bottom: 2rem;
+  }
+
   .container {
     padding: 1rem;
   }
@@ -277,13 +330,5 @@ i.fa-solid {
   .profile-image {
     width: 200px;
     height: 200px;
-  }
-
-  .services-section {
-    margin: 0;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
   }
 }

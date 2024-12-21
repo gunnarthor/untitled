@@ -226,8 +226,6 @@ i.fa-solid {
 
 /* Media Queries */
 
-/* Media Queries */
-
 /* Clients Section */
 .clients-section .row {
   white-space: nowrap;
@@ -309,6 +307,7 @@ i.fa-solid {
 
   .work-grid h4 {
     margin-bottom: 0.25rem;
+    text-align: left;
   }
 
   .work-grid p {

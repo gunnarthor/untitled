@@ -23,7 +23,6 @@ h2 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
-  text-align: center;
 }
 
 h3 {
@@ -39,24 +38,34 @@ h3 {
   padding: 2rem;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Header Section */
 .header {
   color: #fff;
-  text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #f5f5f3, #e6e7e5);
-  padding: 0 6rem 7rem;
+  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #ffffff 10%, #176964 300%);
+  padding: 0 6rem 3rem;
+}
+
+.header .container {
+  padding-top: 2rem;
 }
 
 .header svg {
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
 }
 
 .header h1 {
-  margin-bottom: 1rem;
-  font-size: 3.25rem;
-  font-weight: bold;
+  margin: 5rem 0 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #606c71;
 }
 
 .header p {
@@ -65,6 +74,29 @@ h3 {
   max-width: 64rem;
   margin: 0 auto;
   color: #606c71;
+}
+
+/* Navigation Styles */
+.main-nav {
+  margin: 0;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.main-nav a {
+  color: #606c71;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #176964;
 }
 
 /* Team Section */
@@ -155,7 +187,7 @@ h3 {
 
 /* Services Section */
 .services-section {
-  margin: 6rem;
+  margin: 6rem 0;
 }
 
 .services-grid {
@@ -203,13 +235,12 @@ i.fa-solid {
 }
 
 .work-section h2 {
-  text-align: center;
   margin-bottom: 3rem;
 }
 
 .work-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 0.8fr 2.2fr;
   gap: 2rem 3rem;
   align-items: start;
 }
@@ -218,7 +249,6 @@ i.fa-solid {
   color: #176964;
   font-size: 1.1rem;
   margin: 0 0 0.5rem 0;
-  text-align: right;
 }
 
 .work-grid p {
@@ -236,7 +266,6 @@ i.fa-solid {
 .clients-section .row {
   white-space: nowrap;
   overflow: hidden;
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -253,10 +282,12 @@ i.fa-solid {
 
 /* Contact Section */
 .contact-section {
-  text-align: center;
   margin: 6rem 0 3rem;
   padding: 2rem 2rem 3rem;
-  background-color: #f3f6fa;
+  background-color: #f5f5f3;
+  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #f9f9f9 10%, #f0f0f0 100%);
+  border: 1px solid #f0f0f0;
   border-radius: 0.4rem;  
 }
 
@@ -268,15 +299,21 @@ i.fa-solid {
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #f3f6fa;
-  border-top: solid 1px #eff0f1;
+  background-color: #f5f5f3;
   font-size: 0.9rem;
 }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .main-nav ul {
+    gap: 2rem;
+  }
+
   .header {
     padding: 3rem 1rem;
   }
@@ -335,5 +372,13 @@ i.fa-solid {
   .profile-image {
     width: 200px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }

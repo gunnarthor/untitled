@@ -23,12 +23,14 @@ h2 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  letter-spacing: -0.02em;
 }
 
 h3 {
   color: #176964;
   font-size: 1.5rem;
   margin-top: 1rem;
+  letter-spacing: -0.01em;
 }
 
 /* Layout */
@@ -46,9 +48,7 @@ h3 {
 
 /* Header Section */
 .header {
-  color: #fff;
-  background-color: #f0f0f0;
-  background: linear-gradient(135deg, #ffffff 10%, #176964 300%);
+  background: #0c2320;
   padding-bottom: 3rem;
 }
 
@@ -58,22 +58,24 @@ h3 {
 
 .header svg {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .header h1 {
-  margin: 5rem 0 1rem;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #606c71;
+  margin: 4rem 0 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .header p {
-  font-size: 1.5rem;
-  opacity: 0.7;
+  font-size: 1.35rem;
   max-width: 64rem;
   margin: 0 auto;
-  color: #606c71;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.01em;
 }
 
 /* Navigation Styles */
@@ -88,15 +90,15 @@ h3 {
 }
 
 .main-nav a {
-  color: #606c71;
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
-  color: #176964;
+  color: #ffffff;
 }
 
 /* Team Section */

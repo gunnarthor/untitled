@@ -38,6 +38,7 @@
           <ul>
             <li><a href="#team">Team</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -169,11 +170,10 @@
   <script>
     document.querySelectorAll('.main-nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        targetElement.scrollIntoView({
+        if (!targetId.startsWith('#')) return;
+        e.preventDefault();
+        document.querySelector(targetId).scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
